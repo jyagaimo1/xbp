@@ -51,4 +51,109 @@ span.blackback{
     background: #393939;
     color: #efefef;
 }
+.heading-004 {
+    padding:0 .4em .2em;
+    border-bottom: 3px dashed #2589d0;
+    background-color: #ffffff;
+    color: #333333;
+}
+.heading-003 {
+    padding:0 .4em .2em;
+    border-bottom: 3px dotted #2589d0;
+    background-color: #ffffff;
+    color: #333333;
+}
+.box-019 {
+    position: relative;
+    margin-top: 1em;
+    padding: 1.8em 1.5em 1em 1.5em;
+    border: 2px solid #2589d0;
+}
 
+.box-019 > div {
+    position: absolute;
+    top: -1.15em;
+    left: -.5em;
+    padding: .4em 1.4em;
+    border-radius: 25px;
+    background-color: #2589d0;
+    color: #fff;
+    font-size: .9em;
+}
+
+.box-019 > div::before {
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 8px;
+    background-color: #2589d0;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    content: '';
+}
+
+.box-019 p {
+    margin: 0;
+}
+.box-018 {
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 1em calc(1.5em + 9px);
+    border-top: 1px solid #2589d0;
+    border-bottom: 1px solid #2589d0;
+    color: #333;
+}
+
+.box-018::before,
+.box-018::after {
+    position: absolute;
+    width: 1px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: calc(100% + 20px);
+    background-color: #2589d0;
+    content: '';
+}
+
+.box-018::before {
+    left: 9px;
+}
+
+.box-018::after {
+    right: 9px;
+}
+.balloon-009 {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 0 22px;
+}
+
+.balloon-009 img {
+    max-width: 70px;
+    height: 100%;
+    border: 3px solid #e6edf3;
+    border-radius: 50%;
+}
+
+.balloon-009 p {
+    position: relative;
+    max-width: 300px;
+    margin: 3px 0 0;
+    padding: .8em 1em;
+    border-radius: 5px;
+    background-color: #e0efff;
+    color: #333333;
+}
+
+.balloon-009 p::before {
+    position: absolute;
+    left: -15px;
+    width: 15px;
+    height: 30px;
+    background-color: #e0efff;
+    clip-path: polygon(0 50%, 100% 0, 100% 100%);
+    content: '';
+}
