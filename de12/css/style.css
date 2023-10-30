@@ -157,3 +157,68 @@ span.blackback{
     clip-path: polygon(0 50%, 100% 0, 100% 100%);
     content: '';
 }
+
+.fusen-003 {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 240px;
+    height: 240px;
+    padding: 2em 2.2em;
+    background-color: #a9ceec;
+    color: #333333;
+}
+
+.fusen-003::before {
+    position: absolute;
+    bottom: -5px;
+    right: 7px;
+    z-index: -1;
+    transform: rotate(5deg);
+    width: 70%;
+    height: 50%;
+    background-color: #d0d0d0;
+    content: "";
+    filter: blur(4px);
+}
+
+.heading-034 {
+    position: relative;
+    margin: 0 0 25px 9px;
+    padding: .5em .8em;
+    background-color: #2589d0;
+    color: #fff;
+}
+
+.heading-034::before {
+    position: absolute;
+    top: 0;
+    left: -9px;
+    z-index: 1;
+    width: 5px;
+    height: 135%;
+    border-radius: 3px;
+    background-color: #600;
+    content: '';
+}
+
+.heading-034 span::before,
+.heading-034 span::after {
+    position: absolute;
+    left: -9px;
+    width: 20px;
+    height: 3px;
+    border-radius: 3px;
+    background-color: #c99;
+    content: '';
+}
+
+.heading-034 span::before {
+    top: 44%;
+    transform: rotate(-25deg);
+}
+
+.heading-034 span::after {
+    top: 54%;
+    transform: rotate(25deg);
+}
