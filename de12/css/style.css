@@ -322,3 +322,36 @@ span.blackback{
 .box-018::after {
     right: 9px;
 }
+.button-045 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 250px;
+    margin: 0 auto;
+    padding: .9em 2em;
+    border-top: 1px solid #2589d0;
+    border-right: none;
+    border-bottom: 1px solid #2589d0;
+    border-left: none;
+    background-color: #fff;
+    color: #2589d0;
+    font-size: 1em;
+}
+
+.button-045::before,
+.button-045::after {
+    position: absolute;
+    width: 1px;
+    height: 140%;
+    background-color: #2589d0;
+    content: '';
+}
+
+.button-045::before {
+    left: calc(3.1em / 5 - 1px);
+}
+
+.button-045::after {
+    right: calc(3.1em / 5 - 1px);
+}
