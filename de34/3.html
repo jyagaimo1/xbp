@@ -1,0 +1,40 @@
+<head>
+    <title>第3回</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<div>
+    <h2 class="heading-034">
+        <span>arduinoのセンサー</span>
+    </h2><br>
+    arduinoでserial monitorの値が300を超えたときledライトが点滅するようにするコード
+
+    <code>
+        <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
+        <li style="background-color:#EFF;">const int ledPin = 13; // LEDを接続したデジタルピン番号</li>
+        <li style="background-color:#EEF;">int threshold = 300;   // しきい値</li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;">void setup() {</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;pinMode(ledPin, OUTPUT); // LEDのピンを出力モードに設定</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;Serial.begin(9600);      // シリアル通信を開始（ボーレートは9600）</li>
+        <li style="background-color:#EFF;">}</li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;">void loop() {</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;// シリアルポートからのデータを読み取る</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;int val=0;</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;val=analogRead(1);</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;// 読み取った値をシリアルモニターに表示</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;Serial.println(val);</li>
+        <li style="background-color:#EFF;">&nbsp;</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;// もしセンサーの値がしきい値以上であればLEDを点滅させる</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;if (val &gt;= threshold) {</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;digitalWrite(ledPin, HIGH); // LEDを点灯</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;delay(500);                  // 0.5秒待つ</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;digitalWrite(ledPin, LOW);  // LEDを消灯</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;delay(500);                  // 0.5秒待つ</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;}<span style="color: red;"> else{</span></li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;digitalWrite(ledPin, LOW);  // LEDを消灯</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;}</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;delay(200);</li>
+        <li style="background-color:#EFF;">}</li>
+        </ol></code>
