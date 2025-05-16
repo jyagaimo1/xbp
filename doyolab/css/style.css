@@ -4,14 +4,14 @@
 @import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400,700&display=swap&subset=japanese');
 /* フォントを指定したいところで */
 
-logo img{
+.logo img{
     border-radius: 50%;
     width: 150px;
     height: 150px;
     object-fit: cover; /* 画像のトリミング */
 }
 
-logotohome img{
+.logotohome img{
     border-radius: 70%;
     width: 70px;
     height: 70px;
@@ -27,7 +27,7 @@ html, body {
 	color: #393939;
     margin-left: 15px;
     margin-bottom: 40px;
-	background: #efefef;
+	background: #c5d7ef;
 }
 h1{
     text-indent: 0em;
@@ -441,3 +441,10 @@ span.blackback{
     transform: none;
     opacity: 1;
 }
+
+.body {
+  background-color: skyblue; /* 背景を水色にする */
+  font-family: sans-serif;
+  padding: 20px;
+}
+
